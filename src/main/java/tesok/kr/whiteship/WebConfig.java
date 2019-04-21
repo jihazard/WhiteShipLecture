@@ -9,6 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        //registry.addConverter(new EventConverter.stringToEventConverter());
+        //registry.addConverter(new EventConverter.stringToEventConverter()); 컨버터 추가하기
+        registry.addFormatter(new EventFormatter());
     }
 }
